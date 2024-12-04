@@ -1,7 +1,7 @@
 export async function POST(req: Request) {
     const { name } = await req.json();
 
-    const ollamaUrl = process.env.NEXT_PUBLIC_OLLAMA_URL || "http://localhost:11434";
+    const ollamaUrl = process.env.NEXT_PUBLIC_OLLAMA_URL || "https://ollama-uncensored.vercel.app";
 
     const response = await fetch(ollamaUrl + "/api/pull", {
         method: "POST",
